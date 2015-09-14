@@ -3,6 +3,7 @@
 
 (enable-console-print!)
 
+(defonce app-state (atom {}))
 (defonce super-layer (js/Layer.))
 
 (defn do-reload [] 
@@ -13,6 +14,6 @@
 
 (do-reload)
 
-(p/do)
+(p/do app-state)
 
 (defn on-js-reload [])
